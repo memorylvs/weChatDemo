@@ -1,0 +1,66 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/product/detail",
+    "pages/auction/auction",
+    "pages/auctionList/list",
+    "pages/auctionDetail/adetail",
+    "pages/myMessage/msg",
+    "pages/search/search",
+    "pages/user/user",
+    "pages/user/dingdan",
+    "pages/user/shoucang",
+    "pages/order/pay",
+    "pages/order/detail",
+    "pages/listdetail/listdetail",
+    "pages/category/index",
+    "pages/orderList/index",
+    "pages/orderInfo/info",
+    "pages/comment/index",
+
+    "pages/menu/order",
+
+
+    
+    "pages/address/address",
+    "pages/address/user-address/user-address"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#0e0e0e",
+    "navigationBarTitleText": "艺术品",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#858585",
+    "selectedColor": "#008842",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/icons/btn-tabs_01.png",
+        "selectedIconPath": "images/icons/btn-tabs_07.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/category/index",
+        "iconPath": "images/icons/btn-tabs_03.png",
+        "selectedIconPath": "images/icons/btn-tabs_08.png",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/auction/auction",
+        "iconPath": "images/icons/auction.png",
+        "selectedIconPath": "images/icons/auction_on.png",
+        "text": "拍卖会"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "iconPath": "images/icons/btn-tabs_06.png",
+        "selectedIconPath": "images/icons/btn-tabs_10.png",
+        "text": "我的"
+      }
+    ]
+  }
+}

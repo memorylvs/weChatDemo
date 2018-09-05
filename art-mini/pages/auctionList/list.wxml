@@ -1,0 +1,40 @@
+<!-- 拍卖品列表  -->
+<view class='top'>
+  <view class='tl fl_l w50'>
+    {{auctionInfo.name}}
+  </view>
+  <navigator class='tr fl_r w50' url='../comment/index?nauction_id={{auctionInfo.id}}'>查看评论 >></navigator>
+</view>
+<view class='zan-panel'>
+  <view>拍卖公司: {{auctionInfo.ncompany.name}}</view>
+  <view>开始时间: {{auctionInfo.starttime_text}}</view>
+  <view>结束时间: {{auctionInfo.starttime_text}}</view>
+  <view>具体地址: {{auctionInfo.city}}—{{auctionInfo.address}}</view>
+</view>
+
+
+<view class='top'>拍品列表</view>
+
+<view class='body'>
+  <navigator class='zan-card' wx:for="{{listInfo}}" wx:key="{{item.id}}" url="../auctionDetail/adetail?infoId={{item.id}}">
+    <view class='p_l'>
+      <image src='{{item.image}}'></image>
+    </view>
+    <view class='p_r'>
+      <view>{{item.name}}</view>
+      <view class='p_price'>当前价 ¥：{{item.price}}</view>
+      <!-- <view>开始时间</view>
+     <view class='p_time'>{{item.nauction.starttime_text}}</view>
+     <view>结束时间</view>
+     <view class='p_time'>{{item.nauction.endtime_text}}</view> -->
+    </view>
+  </navigator>
+  <view class="more" bindtap="getMore" wx:if="{{listInfo.length !== 0}}">点击查看更多</view>
+  <!-- 为空  -->
+  <view class="search_no" wx:if="{{listInfo.length === 0}}">
+    <view class="font_14">
+      <image class="scimg" src="/images/search_no.png"></image>
+    </view>
+    <text>暂无商品~~</text>
+  </view>
+</view>

@@ -1,0 +1,56 @@
+<view class="page">
+  <!-- 用户信息  -->
+  <view class="userinfo" style='background: url(/images/b2.jpg) no-repeat;background-size: cover'>
+    <view wx:if="{{userInfo.avatarUrl}}">
+      <image class="userinfo-avatar fl_l" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    </view>
+    <view wx:else>
+      <image class="userinfo-avatar fl_l" src="/images/user.png" background-size="cover"></image>
+    </view>
+    <text class="fl_l">{{userInfo.nickName}}</text>
+  </view>
+
+  <view class="sc mt10 df">
+    <view class="df_1 tc">
+      <navigator url="../user/shoucang?type=0" hover-class="none">
+        <view><image src="/images/use_sc.png"></image></view>
+        <text>藏品收藏</text>
+      </navigator>
+    </view>
+    <view class="df_1 tc">
+      <navigator url="../user/shoucang?type=1" hover-class="none">
+        <view><image src="/images/collect.png"></image></view>
+        <text>拍品收藏</text>
+      </navigator>
+    </view>
+    <view class="df_1 tc" style='position:relative'>
+      <navigator url="../myMessage/msg" hover-class="none">
+        <view><image src="/images/use_ry.png"></image></view>
+        <text>我的消息</text>
+      </navigator>
+      <view class="msg-state {{msgShow ?'show':''}}"></view>
+    </view>
+  </view> 
+
+  <!--订单详情-->
+  <navigator url="../orderList/index?sort=1">
+    <view class="qbdd mt10">
+      <span class="font_14 c3">藏品订单</span>
+      <view class="fl_r c9 font_12 l_h20"  hover-class="none" > 查看></view>
+    </view>
+  </navigator>
+  <navigator url="../orderList/index?sort=2">
+    <view class="qbdd mt10">
+      <span class="font_14 c3">拍品订单</span>
+      <view class="fl_r c9 font_12 l_h20" hover-class="none" > 查看></view>
+    </view>
+  </navigator>
+
+  <!-- 联系客服，点击后会发送消息给在小程序后台配置的，客服人员  -->
+  <button class="zan-btn " open-type="contact" session-from="weapp">
+    <span class="font_14 c33">联系客服</span>
+    <navigator class="fl_r c9 font_12 l_h"  hover-class="none" >></navigator>
+  </button>
+</view>
+
+

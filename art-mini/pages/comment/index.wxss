@@ -1,0 +1,107 @@
+.comment-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.zan-form__textarea {
+  display: block !important;
+  width: 90% !important;
+  align-items: top !important;
+  margin: 10px auto;
+  border-bottom: 1px solid #ccc;
+}
+
+.cancel {
+  text-align: right;
+  font-size: 14px;
+  color: #9e9e9e;
+  padding: 17px;
+}
+
+.body {
+  padding-bottom: 50px;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  padding-top: 10px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.comment {
+  width: 81%;
+}
+
+.user {
+  /* width: 20%;
+  margin-right: 0.24rem;
+  width: 35px;
+  height: 385px;
+  overflow: hidden;
+  border-radius: 100%; */
+}
+
+.user image {
+  display: block;
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 35rpx;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.user-name {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.content, .replay-content {
+  font-size: 14px;
+  line-height: 25px;
+  word-wrap: break-word;
+}
+
+.comment-time {
+  font-size: 13px;
+  color: #9e9e9e;
+  margin-top: 5px;
+  margin-bottom: 7px;
+}
+
+.comment-replay {
+  background: #f6f6f6;
+}
+
+.replay-content {
+  padding: 0 10px;
+}
+
+replay-name {
+  color: #3c3c3c;
+}
+
+.comment-btn {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.more {
+  height: 70rpx;
+  margin: 0 auto;
+  font-size: 30rpx;
+  color: #000;
+  line-height: 70rpx;
+  text-align: center;
+}
+
+.msg {
+  padding: 10px;
+  text-align: center;
+  font-size: 15px;
+  color: #9e9e9e;
+}

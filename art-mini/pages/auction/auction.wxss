@@ -1,0 +1,40 @@
+.cont {
+  width: 100%;
+  background: #fff;
+  margin-bottom: 10px;
+}
+
+.cont .pr {
+  background: #fff;
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid #ededed;
+  padding: 10px 0;
+  font-size: 13px;
+  line-height: 17px;
+}
+
+.head {
+  font-size: 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.s-pre-pay {
+  font-size: 26rpx;
+  color: red;
+}
+
+.s-time {
+  font-size: 23rpx;
+  margin: 10px 0;
+}
+
+.more {
+  height: 70rpx;
+  margin: 0 auto;
+  font-size: 30rpx;
+  color:#000;
+  line-height: 70rpx;
+  text-align: center;
+}

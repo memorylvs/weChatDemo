@@ -1,0 +1,16 @@
+.top {
+  font-size:14px;
+  padding:10px;
+  border-left: 2px solid #d83c39;
+}
+.zan-cell {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.item {
+  width: 50%;
+}
+.strong {
+  color: red;
+}

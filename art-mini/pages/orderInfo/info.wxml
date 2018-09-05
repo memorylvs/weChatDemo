@@ -1,0 +1,24 @@
+<!-- 订单详情  -->
+
+<view class='top tc'>
+  订单详情
+</view>
+<view class='zan-cell'>
+  <view class='item tl'>名称:</view>
+  <view class='item tr'>{{info.nproduct.name || info.nauctionitem.name}}</view> 
+</view>
+
+<view class='zan-cell'>
+  <view class='item tl'>金额:</view>
+  <view class='item tr strong'>¥ {{info.nproduct.price || info.nauctionitem.price}}</view> 
+</view>
+
+<view class='zan-cell'>
+  <view class='item tl'>下单时间:</view>
+  <view class='item tr'>{{info.paytime_text}}</view>  
+</view>
+
+<view class='zan-cell'>
+  <view class='item tl'>购买人:</view>
+  <view class='item tr'>{{info.nfans.nickname}}</view> 
+</view>

@@ -1,0 +1,148 @@
+.msg-top {
+  padding: 14px;
+  border-bottom: 1px solid #e3e5e9;
+  letter-spacing: 5px;
+}
+
+.msg-item {
+  position: relative;
+  border-bottom: 1px solid #e3e5e9;
+  color: #777;
+}
+
+.zan-card {
+  padding: 10px 15px;
+}
+
+.msg-name {
+  font-weight: 900;
+  margin-bottom: 6px;
+}
+
+.df {
+  justify-content: space-between;
+}
+
+.tc, .tl {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.tl {
+  width: 69.99%;
+}
+
+.msg-item .tc {
+  width: 39.99%;
+}
+
+.msg-item .zan-card {
+  width: 80%;
+}
+
+.msg-item .wxParse-p, .msg-item .wxParse-inline {
+  width: 100%;
+  overflow: hidden;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.msg-state {
+  width: 6px;
+  height: 6px;
+  position: absolute;
+  top: 45%;
+  left: 1px;
+  border-radius: 50%;
+  background-color: red;
+  visibility: visible;
+}
+.hidden {
+  visibility: hidden!important;
+}
+.msg-del {
+  width: 15%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: #999;
+  font-size: 12px;
+  text-align: center;
+}
+
+.viewBg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #636363;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.35s;
+}
+
+.viewBody {
+  position: relative;
+  margin: auto;
+  width: 90%;
+  height: 86%;
+  top: 2%;
+  opacity: 0;
+  background-color: #fff;
+  border-radius: 6px;
+  transition: all 0.35s;
+}
+
+.viewBody .content {
+  height:85%!important;
+  padding: 15px;
+  overflow-y: scroll;
+}
+
+.viewBody .content .head {
+  text-align: center;
+  font-size: 16px;
+}
+
+.viewBody .content .time {
+  text-align: right;
+  font-size: 13px;
+  padding-bottom: 6px;
+  padding-top: 10px;
+}
+.viewBody .wxParse-p {
+  font-size: 15px;
+  color: #999;
+  text-align:justify;
+  text-indent:32px;
+  line-height:32px;
+  padding-top: 6px;
+  border-top:1px solid #eee;
+}
+.goBack {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-bottom-right-radius:6px;
+  border-bottom-left-radius:6px;
+}
+.msg-show {
+  visibility: visible!important;
+  opacity: 1;
+}
+.msg-show .viewBody {
+  top: 0!important;
+  opacity: 1;
+}

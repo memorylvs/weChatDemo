@@ -1,0 +1,55 @@
+/* 列表  */
+.top {
+  font-size:14px;
+  padding:10px;
+  border-left: 2px solid #d83c39;
+  overflow:hidden;
+}
+.zan-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 13px;
+  padding: 10px;
+  line-height:26px;
+  margin-top: 0;
+  border-bottom: 0;
+}
+.zan-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: 1px solid #e3e5e9;
+  padding: 10px;
+}
+.p_l {
+  width: 49.99%;
+  height: 130px;
+}
+.p_l image {
+  width: 157px;
+  height: 130px;
+}
+.p_r {
+  width: 49.99%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+ .p_r .p_price {
+  color: #d83c39;
+}
+/* .p_r .p_time {
+  color: #8e8e8e;
+}  */
+.more {
+  height: 70rpx;
+  margin: 0 auto;
+  font-size: 30rpx;
+  color:#000;
+  line-height: 70rpx;
+  text-align: center;
+}
+.fl_r{
+  color: #9e9e9e;
+}

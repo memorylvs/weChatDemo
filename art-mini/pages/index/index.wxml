@@ -1,0 +1,49 @@
+<!-- index.wxml -->
+<view class="page">
+  <swiper indicator-dots="{{indicatorDots}}" wx:key="{{item.id}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgs}}" wx:key="{{item.id}}">
+      <swiper-item>
+        <image src="{{item.image}}" class="slide-image" width="100%" height="200"  />
+      </swiper-item>
+    </block>
+  </swiper>
+  
+  <!-- <view class="cont">
+    <view class='head tc'>藏品推荐</view>
+    <navigator wx:for="{{products}}" wx:key="{{item.id}}" class="pr" url="../product/detail?productId={{item.id}}" hover-class="changestyle">
+      <image class="photo" src="{{item.image}}"></image>
+      <view class="title">{{item.name}}</view>
+      <view style="display:flex;line-height:50rpx;padding:10rpx 0;">
+        <view class="gmxx" style="  color: red;">¥ {{item.price}}</view> -->
+         <!-- <view class="gmx">¥ {{item.price}}</view>  -->
+      <!-- </view>
+    </navigator>
+  </view> -->
+
+  <view class="cont">
+  <view class='top df'>
+    <view class='head tc w100'>
+      拍卖会推荐
+    </view>
+    <navigator class='tr fl_r moreMsg' url='/pages/auction/auction'  open-type = "switchTab">更多 >></navigator>  
+  </view>
+    <!-- <navigator wx:for="{{lots}}" wx:key="{{item.id}}" class="pr" url="../auctionDetail/adetail?infoId={{item.id}}" hover-class="changestyle">
+      <image class="photo" src="{{item.image}}"></image>
+      <view class="title">{{item.name}}</view>
+      <view style="display:flex;line-height:50rpx;padding:10rpx 0;">
+        <view class="gmxx" style="  color: red;">¥ {{item.price}}</view>
+         <!-- <view class="gmx">¥ {{item.price}}</view>  -->
+      <!-- </view>
+    </navigator> -->
+    <view class="cont tc">
+      <navigator wx:for="{{list}}" wx:key="{{item.id}}"  class="pr zan-card" url="../auctionList/list?nauction_id={{item.id}}">
+        <view class="title">{{item.name}}</view>
+        <view class='s-time'>开始时间{{item.starttime_text}}</view>
+        <view class='s-time'>结束时间{{item.starttime_text}}</view>
+        <view>{{item.city}}</view>
+      </navigator>
+    </view>
+  </view>
+
+  <!-- <view class="clear mt10" bindtap="getMore">点击查看更多</view> -->
+</view>

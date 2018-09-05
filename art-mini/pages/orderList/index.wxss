@@ -1,0 +1,56 @@
+/* 列表  */
+.top {
+  font-size:14px;
+  padding:10px;
+  border-left: 2px solid #d83c39;
+}
+.zan-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 13px;
+  padding: 10px;
+  line-height:26px;
+  margin-top: 0;
+  border-bottom: 0;
+}
+.zan-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: 1px solid #e3e5e9;
+  padding: 10px;
+}
+.p_l {
+  width: 30.99%;
+}
+.p_l image {
+  max-width: 100%;
+  height: 109px;
+}
+.p_r {
+  width: 60.99%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+ .p_r .p_price {
+  color: #d83c39;
+}
+/* .p_r .p_time {
+  color: #8e8e8e;
+}  */
+.df {
+  flex-direction: row;
+  justify-content: space-between;
+}
+.zan-btn {
+  margin-top: 17px;
+}
+.msg {
+  padding: 10px;
+  text-align: center;
+  font-size: 15px;
+  color: #9e9e9e;
+  border-top: 1px solid #e3e5e9;
+}

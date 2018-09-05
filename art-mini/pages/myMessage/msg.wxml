@@ -1,0 +1,34 @@
+<!-- 消息  -->
+<view class='zan-card tc msg-top'>我的消息</view>
+
+ <view class="search_no" wx:if="{{!msgData.length}}">
+    <view class="font_14">
+      <image class="scimg" src="/images/search_no.png"></image>
+    </view>
+    <text>暂无消息/(ㄒoㄒ)/~~</text>
+  </view>
+
+<view class='msg-item' wx:for="{{msgData}}" wx:key="{{item.id}}" >
+  <view class='zan-card df' bindtap='viewMsg' data-id="{{item.id}}">
+    <view class='tl'>
+      <view class='msg-name'>{{item.name}}</view>
+      <import src="../../wxParse/wxParse.wxml" />
+      <template is="wxParse" data="{{wxParseData:content.nodes}}" />
+    </view>
+    <view class='tc'>{{item.createtime_text}}</view>
+  </view>
+  <view class='msg-del' data-id="{{item.id}}" bindtap='removeMsg'>删除</view>
+  <view class="msg-state{{item.readtime != 0 ?'hidden':''}}"></view>
+</view>
+<!-- 详情弹出框  -->
+<view class="viewBg df {{showMsg?'msg-show':''}}">
+  <view class='viewBody'>
+    <view class='content'>
+      <view class='head'>{{currentData.name}}</view>
+      <view class='time'>{{currentData.createtime_text}}</view>
+      <import src="../../wxParse/wxParse.wxml" />
+      <template is="wxParse" data="{{wxParseData:content.nodes}}" />
+    </view>
+    <view class='goBack zan-btn zan-btn--primary' bindtap='confirmMsg' data-id="{{currentData.id}}">返回</view>
+  </view>
+</view>

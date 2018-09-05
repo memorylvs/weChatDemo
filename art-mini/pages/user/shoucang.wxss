@@ -1,0 +1,90 @@
+/* pages/user/shoucang.wxss */
+
+.clearbutton {
+  background: #fff;
+  display: inline-block;
+  margin: 3% 3% 2% 3%;
+  color: #dd2727;
+  font-size: 14px;
+  width: 94%;
+}
+
+.shop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom:1px solid #e3e5e9;
+}
+
+.zan-card {
+  width: 75%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.zan-cell {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.sh_slt {
+  width: 100px;
+  height: 95px;
+  overflow: hidden;
+  border-radius: 5px;
+  margin-right: 4%;
+  float: left;
+}
+
+.sp_text {
+  line-height: 20px;
+  width: 100%;
+}
+
+.sp_tit {
+  width: 100%;
+  overflow: hidden;
+  font-size: 14px;
+}
+
+.sp_neb {
+  width: 100%;
+  overflow: hidden;
+  font-size: 12px;
+  color: #999;
+}
+
+.sp_jg {
+  width: 100%;
+  overflow: hidden;
+  font-size: 14px;
+  color: #fc0628;
+}
+
+.dle {
+  width:15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: #999;
+  font-size: 12px;
+}
+
+.dle image {
+  width: 18px;
+  height: 18px;
+  vertical-align: sub;
+}
+
+.jk_bottom {
+  position: fixed;
+  bottom: 0;
+  background: #fff;
+  width: 100%;
+  display: inline-flex;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+  color: #999;
+}

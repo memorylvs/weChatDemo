@@ -1,0 +1,47 @@
+<!-- 评论框 -->
+<view class='comment-container'wx:if="{{isCommit}}">
+  <form bindsubmit="bindFormSubmit" class='zan-form'>
+    <textarea name="textarea"  class='zan-form__textarea' bindblur="bindTextAreaBlur"  placeholder="{{replyMsg}}" placeholder-style="font-size:14px" />
+    <button type='primary' form-type="submit" disabled='{{commitEnable}}'> 提交 </button>
+    <view bindtap='cancelComment' class='cancel'>取消</view>
+  </form>
+</view>
+<!-- 评论列表  -->
+<view class='body' wx:if="{{!isCommit}}">
+  <view class='item zan-card' wx:for="{{list}}" wx:key="{{item.id}}">
+    <!-- 左侧用户头像  -->
+    <view class='user'>
+      <image src='{{item.self.nfans_avatar}}'></image>
+    </view>
+    <!-- 右侧评论  -->
+    <view class='comment'>
+      <view class='user-name'>{{item.self.nfans_nickname}}</view>
+      <view class='content' data-pid="{{item.self.id}}" data-rid="{{item.self.id}}" data-name="{{item.self.nfans_nickname}}" bindtap='replay'>
+        {{item.self.content}}
+      </view>
+      <view class='comment-time'>{{item.self.createtime}}</view>
+      <view class='comment-replay'>
+        <view class='replay-content' wx:for="{{item.child}}" wx:for-item="child" wx:key="id">
+          <view class='replay-name' data-pid="{{child.id}}" data-rid="{{child.rid}}" data-name="{{child.nfans_nickname}}" bindtap='replay'>
+          {{child.nfans_nickname}}: {{child.content}}
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 为空  -->
+  <view class="search_no" wx:if="{{list.length === 0}}">
+    <view class="font_14">
+      <image class="scimg" src="/images/search_no.png"></image>
+    </view>
+    <text>暂时还没有评论~~</text>
+  </view>
+  <view class='msg' wx:if="{{getMsg && list.length !== 0}}">
+    到底了~~
+  </view>
+</view>
+
+<!-- 评论按钮  -->
+<view class='comment-btn' wx:if="{{!isCommit}}" bindtap='showCommit'>
+  <button type="default" hover-class="other-button-hover">发表评论</button>
+</view>

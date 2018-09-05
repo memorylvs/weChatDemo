@@ -1,0 +1,26 @@
+<view class="page">
+  <view class="search_no" wx:if="{{!productData.length}}">
+    <view class="font_14">
+      <image class="scimg" src="/images/search_no.png"></image>
+    </view>
+    <text>暂时还没有收藏/(ㄒoㄒ)/~~</text>
+  </view>
+
+  <view class="shop df" wx:for="{{productData}}" wx:key="{{item.id}}">
+    <navigator class='zan-card' url="../product/detail?productId={{item.productid}}" wx:if="{{type==0}}">
+      <image class="sh_slt" src="{{item.nproduct_image}}"></image>
+      <view class="df_1 zan-cell">
+        <view class="sp_tit ovh1">{{item.nproduct_name}}</view>
+        <view class="sp_jg">￥：{{item.nproduct_price}}</view>
+      </view>
+    </navigator>
+    <navigator class='zan-card' url="../auctionDetail/adetail?infoId={{item.productid}}" wx:if="{{type==1}}">
+      <image class="sh_slt" src="{{item.nproduct_image}}"></image>
+      <view class="df_1 zan-cell">
+        <view class="sp_tit ovh1">{{item.nproduct_name}}</view>
+        <view class="sp_jg">￥：{{item.nproduct_price}}</view>
+      </view>
+    </navigator>
+    <view class="dle" data-productid="{{item.productid}}" bindtap="removeFavorites">取消收藏</view>
+  </view>
+</view>

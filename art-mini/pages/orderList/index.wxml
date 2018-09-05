@@ -1,0 +1,53 @@
+<!-- 列表  -->
+
+<view class='top tc'>
+    订单列表
+</view>
+
+<view class='body'>
+<view wx:if="{{collectState}}">
+  <navigator class='zan-card' wx:for="{{listData}}" wx:key="{{item.id}}" url="../orderInfo/info?id={{item.id}}&sort=1">
+    <view class='p_l'>
+      <image src='{{item.nproduct.image}}'></image>
+    </view>
+    <view class='p_r'>
+      <view>{{item.nproduct.name}}</view>
+      <view class='df'>
+        <view>下单时间</view>
+        <view class='p_time'>{{item.paytime_text}}</view>
+      </view>
+     <!-- <view class='df'>
+       <view class='tl'>订单状态</view>
+       <view class='tr'>{{item.state}}</view>
+     </view> -->
+    </view>
+  </navigator>
+</view>
+<view wx:if="{{auctionState}}">
+    <navigator class='zan-card' wx:for="{{listData}}" wx:key="{{item.id}}" url="../orderInfo/info?id={{item.id}}&sort=2">
+    <view class='p_l'>
+       <image src='{{item.nauctionitem.image}}'></image> 
+    </view>
+    <view class='p_r'>
+      <view>{{item.nauctionitem.name}}</view>
+      <view class='df'>
+        <view>下单时间</view>
+        <view class='p_time'>{{item.paytime_text}}</view>
+      </view>
+     <!-- <view class='df'>
+       <view class='tl'>订单状态</view>
+       <view class='tr'>{{item.state}}</view>
+     </view> -->
+    </view>
+  </navigator>
+</view>
+  <button type="primary" wx:if="{{!getMsg}}" class='zan-btn' bindtap='getMore'>加载更多</button>
+  <view class='msg' wx:if="{{getMsg}}">到底了~~</view>
+
+  <view class="search_no" wx:if="{{listData.length === 0}}">
+    <view class="font_14">
+      <image class="scimg" src="/images/search_no.png"></image>
+    </view>
+    <text>暂无订单</text>
+  </view>
+</view>

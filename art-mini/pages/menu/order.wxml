@@ -1,0 +1,29 @@
+<!--pay.wxml-->
+<view class="w100">
+  <view class='zan-form'>
+    <view class="page-section">
+      <view class="weui-cells__title">粉丝联系人名称:</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <input class="weui-input" bindinput="bindName" placeholder="请输入姓名" />
+        </view>
+      </view>
+    </view>
+    <view class="page-section">
+      <view class="weui-cells__title">粉丝联系电话:</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <input class="weui-input" bindinput="bindPhone" placeholder="请输入手机号码" />
+        </view>
+      </view>
+    </view>
+    <view class='total'>总计支付：
+      <span class="payMoney">¥ {{price}}</span>
+    </view>
+
+    <view class='zhifu'>
+      <button type="primary" disabled="{{btnDisabled}}" formType="submit" bindtap="Pay">微信支付</button>
+    </view>
+
+  </view>
+</view>
